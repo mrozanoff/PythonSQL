@@ -1,2 +1,2 @@
 # PythonSQL
-Learning how to query SQL through python. WORK IN PROGRESS
+Learning how to use SQL through python. WORK IN PROGRESS
