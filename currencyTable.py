@@ -16,8 +16,10 @@ def create_server_connection(host_name, user_name, user_password):
 
     return connection
 
-def create_db_connection(host_name, user_name, user_password, db_name):
+def create_db_connection(host_name, user_name):
     connection = None
+    db_name = input("Enter Database name:")
+    user_password = input("Enter Pass:")
     try:
         connection = mysql.connector.connect(
             host=host_name,
@@ -63,7 +65,7 @@ CREATE TABLE currency(
     );
 '''
 
-connection = create_db_connection('localhost', 'root', '123Twister!', 'exchange')
+connection = create_db_connection('localhost', 'root')
 
 loadtable = '''
 LOAD DATA INFILE 'currencyData2020.csv' INTO TABLE currency
